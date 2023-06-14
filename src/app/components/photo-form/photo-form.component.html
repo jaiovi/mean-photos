@@ -4,7 +4,7 @@
             Subir una foto
         </div>
         <div class="card-body">
-            <form >
+            <form (submit)="uploadPhoto(title,description)">
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="Titulo de foto" required #title>
                 </div>
@@ -14,8 +14,8 @@
                     </textarea>
                 </div>
                 <!--aqui continua el codigo-->
-                <input type="file" #photoInput class="d-none">
-                <img src="../../../assets/no_image.jpeg" alt="No image" class="img-fluid">
+                <input type="file" (change)="onPhotoSelected($event)" #photoInput class="d-none">
+                <img [src]="photoSelected||'../../../assets/no_image.jpeg'" alt="No image" class="img-fluid" (click)="photoInput.click()">
                 <div class="d-grid gap-2">
                     <button class="btn btn-primary btn-block mt-4">
                         Subir imagen
