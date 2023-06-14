@@ -1,7 +1,7 @@
 <div class="col-lg-4 mx-auto">
     <div class="card">
         <div class="card-header">
-            subir na foto
+            Subir una foto
         </div>
         <div class="card-body">
             <form >
@@ -9,8 +9,17 @@
                     <input type="text" class="form-control" placeholder="Titulo de foto" required #title>
                 </div>
                 <div class="form-group">
-                    <textarea type="text" class="form-control" placeholder="Descruocuib de la foto" cols="30" rows="2" #description>
+                    <textarea type="text" class="form-control" placeholder="Descripcion de la foto"
+                     cols="30" rows="2" #description>
                     </textarea>
+                </div>
+                <!--aqui continua el codigo-->
+                <input type="file" #photoInput class="d-none">
+                <img src="../../../assets/no_image.jpeg" alt="No image" class="img-fluid">
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary btn-block mt-4">
+                        Subir imagen
+                    </button>
                 </div>
             </form>
         </div>
